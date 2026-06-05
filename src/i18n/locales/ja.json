@@ -1,0 +1,42 @@
+﻿{
+  "app_title": "ヨス観光ガイド",
+  "app_subtitle": "2026 ヨス世界島博覧会",
+  "nav": {
+    "home": "ホーム",
+    "restaurants": "グルメ",
+    "attractions": "観光地",
+    "ai_course": "AIコース",
+    "weather": "天気",
+    "reviews": "レビュー",
+    "transport": "交通",
+    "festivals": "祭り"
+  },
+  "cards": {
+    "restaurants": "ヨスグルメ",
+    "restaurants_desc": "新鮮な海鮮と地元の名店を発見",
+    "attractions": "観光スポット",
+    "attractions_desc": "ヨスの美しい観光地を探検",
+    "ai_course": "AIおすすめコース",
+    "ai_course_desc": "AIがカスタム旅行コースを提案",
+    "weather": "天気情報",
+    "weather_desc": "ヨスのリアルタイム天気を確認",
+    "reviews": "旅行レビュー",
+    "reviews_desc": "他の旅行者の生の声",
+    "transport": "交通案内",
+    "transport_desc": "ヨスへのアクセス方法",
+    "festivals": "祭り・イベント",
+    "festivals_desc": "ヨスの多彩な祭りとイベント情報",
+    "language": "言語設定",
+    "language_desc": "韓国語·English·日本語·中文"
+  },
+  "theme": {
+    "ocean": "オーシャンブルー",
+    "night": "ナイトシー",
+    "practical": "実用モード"
+  },
+  "common": {
+    "back": "戻る",
+    "more": "もっと見る",
+    "loading": "読み込み中..."
+  }
+}

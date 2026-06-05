@@ -1,0 +1,159 @@
+/* ============================================
+   🏖️ Attractions Page — Deep Sea Theme
+   ============================================ */
+
+/* ── 카드 ── */
+.attr-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.attr-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 200, 255, 0.15);
+}
+
+/* ── 카드 헤더 (카테고리별 그라디언트) ── */
+.attr-card-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  padding: 0 16px;
+}
+.attr-card-header.nature {
+  background: linear-gradient(135deg, #0d4d2b 0%, #1a7a4a 50%, #0d4d2b 100%);
+}
+.attr-card-header.culture {
+  background: linear-gradient(135deg, #4a1942 0%, #7b2d8e 50%, #4a1942 100%);
+}
+.attr-card-header.experience {
+  background: linear-gradient(135deg, #0a3d62 0%, #1289A7 50%, #0a3d62 100%);
+}
+.attr-card-header.landmark {
+  background: linear-gradient(135deg, #6F1E51 0%, #B33771 50%, #6F1E51 100%);
+}
+
+/* ── 뱃지 ── */
+.attr-card-header .category-badge {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(6px);
+}
+.attr-card-header .fee-badge {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: rgba(0, 230, 180, 0.25);
+  color: #5cffc8;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  backdrop-filter: blur(6px);
+}
+
+/* ── 카드 바디 ── */
+.attr-card-body {
+  padding: 18px 16px 16px;
+}
+.attr-card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.attr-card-title h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+.attr-rating {
+  font-size: 0.85rem;
+  color: #ffd700;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.attr-desc {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+/* ── 하이라이트 태그 ── */
+.attr-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.highlight-tag {
+  background: rgba(0, 200, 255, 0.12);
+  color: #7dd8ff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid rgba(0, 200, 255, 0.2);
+}
+
+/* ── 주소 ── */
+.attr-address {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+/* ── 액션 버튼 ── */
+.attr-actions {
+  display: flex;
+  gap: 8px;
+}
+.attr-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px 0;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+.attr-btn:active {
+  transform: scale(0.97);
+}
+.attr-btn.call {
+  background: rgba(0, 200, 120, 0.15);
+  color: #5cffc8;
+  border: 1px solid rgba(0, 200, 120, 0.25);
+}
+.attr-btn.call:hover {
+  background: rgba(0, 200, 120, 0.25);
+}
+.attr-btn.map {
+  background: rgba(255, 220, 0, 0.12);
+  color: #ffe066;
+  border: 1px solid rgba(255, 220, 0, 0.2);
+}
+.attr-btn.map:hover {
+  background: rgba(255, 220, 0, 0.22);
+}

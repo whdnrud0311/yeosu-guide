@@ -1,0 +1,373 @@
+/* ============================================
+   🚆 Transport Page — Deep Sea Theme
+   ============================================ */
+
+.transport-container {
+  padding: 0 16px 100px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ---------- Hero ---------- */
+.tp-hero {
+  text-align: center;
+  padding: 32px 0 24px;
+}
+
+.tp-hero-emoji {
+  font-size: 48px;
+  margin-bottom: 12px;
+  animation: tpFloat 3s ease-in-out infinite;
+}
+
+@keyframes tpFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.tp-hero-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--accent);
+  margin: 0 0 8px;
+}
+
+.tp-hero-sub {
+  font-size: 14px;
+  color: var(--sub);
+  margin: 0;
+}
+
+/* ---------- Search ---------- */
+.tp-search-bar {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.tp-search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--sub);
+}
+
+.tp-search-input {
+  width: 100%;
+  padding: 14px 14px 14px 44px;
+  border-radius: 16px;
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  background: var(--card);
+  color: var(--text);
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+.tp-search-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.15);
+}
+
+.tp-search-input::placeholder {
+  color: var(--sub);
+}
+
+/* ---------- Categories ---------- */
+.tp-categories {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tp-categories::-webkit-scrollbar {
+  display: none;
+}
+
+.tp-cat-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: 24px;
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  background: var(--card);
+  color: var(--sub);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tp-cat-btn.active {
+  background: var(--accent);
+  color: #0a1628;
+  border-color: var(--accent);
+  box-shadow: 0 4px 16px rgba(100, 255, 218, 0.3);
+}
+
+.tp-cat-btn:not(.active):hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ---------- Results Count ---------- */
+.tp-result-count {
+  font-size: 13px;
+  color: var(--sub);
+  margin: 0 0 12px 4px;
+}
+
+/* ---------- Card List ---------- */
+.tp-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ---------- Card ---------- */
+.tp-card {
+  background: var(--card);
+  border-radius: 20px;
+  border: 1.5px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.tp-card:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Header */
+.tp-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  cursor: pointer;
+}
+
+.tp-card-emoji {
+  font-size: 36px;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.tp-card-title-area {
+  flex: 1;
+  min-width: 0;
+}
+
+.tp-card-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 4px;
+  line-height: 1.3;
+}
+
+.tp-card-desc {
+  font-size: 12.5px;
+  color: var(--sub);
+  margin: 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tp-expand-icon {
+  color: var(--sub);
+  font-size: 12px;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+
+.tp-expand-icon.expanded {
+  transform: rotate(180deg);
+}
+
+/* Quick Info Chips */
+.tp-quick-info {
+  display: flex;
+  gap: 8px;
+  padding: 0 18px 14px;
+  flex-wrap: wrap;
+}
+
+.tp-info-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 12px;
+  color: var(--sub);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tp-info-chip svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ---------- Expanded Details ---------- */
+.tp-card-details {
+  padding: 0 18px 18px;
+  overflow: hidden;
+}
+
+.tp-detail-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tp-detail-row svg {
+  color: var(--accent);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.tp-detail-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tp-detail-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tp-detail-value {
+  font-size: 13.5px;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Tip Row */
+.tp-tip-row {
+  background: rgba(100, 255, 218, 0.05);
+  border-radius: 12px;
+  padding: 12px !important;
+  margin-top: 8px;
+  border-top: none !important;
+}
+
+/* ---------- Action Buttons ---------- */
+.tp-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.tp-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s;
+  backdrop-filter: blur(12px);
+}
+
+.tp-btn-call {
+  background: rgba(100, 255, 218, 0.12);
+  color: var(--accent);
+  border: 1.5px solid rgba(100, 255, 218, 0.25);
+}
+
+.tp-btn-call:hover {
+  background: rgba(100, 255, 218, 0.25);
+  box-shadow: 0 4px 20px rgba(100, 255, 218, 0.2);
+}
+
+.tp-btn-map {
+  background: rgba(99, 179, 237, 0.12);
+  color: #63b3ed;
+  border: 1.5px solid rgba(99, 179, 237, 0.25);
+}
+
+.tp-btn-map:hover {
+  background: rgba(99, 179, 237, 0.25);
+  box-shadow: 0 4px 20px rgba(99, 179, 237, 0.2);
+}
+
+/* ---------- Category Accent Colors ---------- */
+.tp-cat-bus .tp-card-emoji { background: rgba(76, 175, 80, 0.12); }
+.tp-cat-bus .tp-card-name { color: #66bb6a; }
+
+.tp-cat-train .tp-card-emoji { background: rgba(33, 150, 243, 0.12); }
+.tp-cat-train .tp-card-name { color: #42a5f5; }
+
+.tp-cat-airport .tp-card-emoji { background: rgba(156, 39, 176, 0.12); }
+.tp-cat-airport .tp-card-name { color: #ab47bc; }
+
+.tp-cat-ferry .tp-card-emoji { background: rgba(0, 188, 212, 0.12); }
+.tp-cat-ferry .tp-card-name { color: #26c6da; }
+
+.tp-cat-local .tp-card-emoji { background: rgba(255, 167, 38, 0.12); }
+.tp-cat-local .tp-card-name { color: #ffa726; }
+
+/* ---------- Empty State ---------- */
+.tp-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--sub);
+}
+
+.tp-empty p:first-child {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+/* ---------- Scroll to Top ---------- */
+.tp-scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #0a1628;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(100, 255, 218, 0.4);
+  z-index: 100;
+  transition: transform 0.2s;
+}
+
+.tp-scroll-top:hover {
+  transform: scale(1.1);
+}

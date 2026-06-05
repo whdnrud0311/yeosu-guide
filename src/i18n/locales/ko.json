@@ -1,0 +1,42 @@
+﻿{
+  "app_title": "여수 관광 가이드",
+  "app_subtitle": "2026 여수 세계섬박람회",
+  "nav": {
+    "home": "홈",
+    "restaurants": "맛집",
+    "attractions": "관광지",
+    "ai_course": "AI 코스",
+    "weather": "날씨",
+    "reviews": "리뷰",
+    "transport": "교통",
+    "festivals": "축제"
+  },
+  "cards": {
+    "restaurants": "여수 맛집",
+    "restaurants_desc": "신선한 해산물과 현지 맛집을 만나보세요",
+    "attractions": "관광 명소",
+    "attractions_desc": "여수의 아름다운 관광지를 탐험하세요",
+    "ai_course": "AI 추천 코스",
+    "ai_course_desc": "AI가 맞춤 여행 코스를 추천해드려요",
+    "weather": "날씨 정보",
+    "weather_desc": "여수의 실시간 날씨를 확인하세요",
+    "reviews": "여행 리뷰",
+    "reviews_desc": "다른 여행자들의 생생한 후기",
+    "transport": "교통 안내",
+    "transport_desc": "여수까지 오는 길을 안내해드려요",
+    "festivals": "축제·행사",
+    "festivals_desc": "여수의 다양한 축제와 행사 정보",
+    "language": "언어 설정",
+    "language_desc": "한국어·English·日本語·中文"
+  },
+  "theme": {
+    "ocean": "오션 블루",
+    "night": "야간 바다",
+    "practical": "실용 모드"
+  },
+  "common": {
+    "back": "뒤로가기",
+    "more": "더보기",
+    "loading": "로딩 중..."
+  }
+}

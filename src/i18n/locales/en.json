@@ -1,0 +1,42 @@
+﻿{
+  "app_title": "Yeosu Tourism Guide",
+  "app_subtitle": "2026 Yeosu World Island Expo",
+  "nav": {
+    "home": "Home",
+    "restaurants": "Restaurants",
+    "attractions": "Attractions",
+    "ai_course": "AI Course",
+    "weather": "Weather",
+    "reviews": "Reviews",
+    "transport": "Transport",
+    "festivals": "Festivals"
+  },
+  "cards": {
+    "restaurants": "Local Restaurants",
+    "restaurants_desc": "Discover fresh seafood and local cuisine",
+    "attractions": "Attractions",
+    "attractions_desc": "Explore the beautiful sights of Yeosu",
+    "ai_course": "AI Recommended Course",
+    "ai_course_desc": "Get personalized travel courses by AI",
+    "weather": "Weather Info",
+    "weather_desc": "Check real-time weather in Yeosu",
+    "reviews": "Travel Reviews",
+    "reviews_desc": "Read vivid reviews from other travelers",
+    "transport": "Transport Guide",
+    "transport_desc": "Find your way to Yeosu",
+    "festivals": "Festivals & Events",
+    "festivals_desc": "Discover festivals and events in Yeosu",
+    "language": "Language",
+    "language_desc": "Korean·English·Japanese·Chinese"
+  },
+  "theme": {
+    "ocean": "Ocean Blue",
+    "night": "Night Sea",
+    "practical": "Practical"
+  },
+  "common": {
+    "back": "Back",
+    "more": "More",
+    "loading": "Loading..."
+  }
+}

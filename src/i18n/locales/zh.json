@@ -1,0 +1,42 @@
+﻿{
+  "app_title": "丽水旅游指南",
+  "app_subtitle": "2026 丽水世界岛博览会",
+  "nav": {
+    "home": "首页",
+    "restaurants": "美食",
+    "attractions": "景点",
+    "ai_course": "AI路线",
+    "weather": "天气",
+    "reviews": "评价",
+    "transport": "交通",
+    "festivals": "庆典"
+  },
+  "cards": {
+    "restaurants": "丽水美食",
+    "restaurants_desc": "发现新鲜海鲜和当地美食",
+    "attractions": "旅游景点",
+    "attractions_desc": "探索丽水的美丽景点",
+    "ai_course": "AI推荐路线",
+    "ai_course_desc": "AI为您定制旅行路线",
+    "weather": "天气信息",
+    "weather_desc": "查看丽水实时天气",
+    "reviews": "旅行评价",
+    "reviews_desc": "阅读其他旅行者的真实评价",
+    "transport": "交通指南",
+    "transport_desc": "前往丽水的交通方式",
+    "festivals": "庆典·活动",
+    "festivals_desc": "丽水的各种庆典和活动信息",
+    "language": "语言设置",
+    "language_desc": "韩语·English·日本語·中文"
+  },
+  "theme": {
+    "ocean": "海洋蓝",
+    "night": "夜海",
+    "practical": "实用模式"
+  },
+  "common": {
+    "back": "返回",
+    "more": "更多",
+    "loading": "加载中..."
+  }
+}
