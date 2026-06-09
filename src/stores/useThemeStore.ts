@@ -24,3 +24,6 @@ export const useThemeStore = create<ThemeState>((set, get) => ({
     set({ theme: next });
   },
 }));
+
+// 🔧 페이지 로드 시 초기 테마 적용
+document.documentElement.setAttribute('data-theme', '');
