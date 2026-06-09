@@ -353,12 +353,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--text);
+  color: #000;
+}
+
+.itinerary-card h3 span {
+  color: #000;
 }
 
 .itinerary-card .meta {
   font-size: 13px;
-  color: #666;
+  color: #000;
   margin-bottom: 8px;
   display: flex;
   gap: 12px;
