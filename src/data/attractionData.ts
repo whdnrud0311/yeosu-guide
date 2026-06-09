@@ -6,7 +6,7 @@ export interface Attraction {
   phone: string;
   rating: number;
   fee: { ko: string; en: string; ja: string; zh: string };
-  image: string;
+  emoji: string; // 이모지 통일 (모든 언어에서 같음)
   description: { ko: string; en: string; ja: string; zh: string };
   highlights: { ko: string[]; en: string[]; ja: string[]; zh: string[] };
 }
@@ -17,6 +17,7 @@ export const attractions: Attraction[] = [
   // ============================================================
   {
     id: 1,
+    emoji: '🌺',
     name: {
       ko: '오동도',
       en: 'Odongdo Island',
@@ -33,7 +34,6 @@ export const attractions: Attraction[] = [
     phone: '061-659-1819',
     rating: 4.5,
     fee: { ko: '무료', en: 'Free', ja: '無料', zh: '免费' },
-    image: '🌺',
     description: {
       ko: '동백꽃으로 유명한 여수의 상징적인 섬, 해안산책로와 등대가 아름답다',
       en: 'Iconic Yeosu island famous for camellia flowers, beautiful coastal trail and lighthouse',
@@ -49,6 +49,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 2,
+    emoji: '🌅',
     name: {
       ko: '향일암',
       en: 'Hyangiram Hermitage',
@@ -65,7 +66,6 @@ export const attractions: Attraction[] = [
     phone: '061-644-4742',
     rating: 4.6,
     fee: { ko: '성인 2,000원', en: '₩2,000 Adult', ja: '大人 2,000ウォン', zh: '成人 2,000韩元' },
-    image: '🌅',
     description: {
       ko: '한국 4대 관음기도처, 일출 명소로 유명한 해변 암자',
       en: 'One of Korea\'s four major prayer temples, famous sunrise spot by the sea',
@@ -81,9 +81,10 @@ export const attractions: Attraction[] = [
   },
   {
     id: 3,
+    emoji: '🥾',
     name: {
       ko: '금오도 비렁길',
-      en: 'Geumodo Biреong Trail',
+      en: 'Geumodo Bireong Trail',
       ja: '金鰲島ビリョンギル',
       zh: '金鳌岛悬崖路',
     },
@@ -97,7 +98,6 @@ export const attractions: Attraction[] = [
     phone: '061-659-1187',
     rating: 4.7,
     fee: { ko: '무료', en: 'Free', ja: '無料', zh: '免费' },
-    image: '🥾',
     description: {
       ko: '절벽 위 해안 트레킹 코스, 한려해상국립공원의 보석',
       en: 'Cliff-top coastal trekking course, gem of Hallyeohaesang National Park',
@@ -113,6 +113,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 4,
+    emoji: '🏝️',
     name: {
       ko: '사도',
       en: 'Sado Island',
@@ -129,7 +130,6 @@ export const attractions: Attraction[] = [
     phone: '061-659-1187',
     rating: 4.3,
     fee: { ko: '무료 (선비 별도)', en: 'Free (ferry extra)', ja: '無料（船賃別途）', zh: '免费（船费另付）' },
-    image: '🏝️',
     description: {
       ko: '모세의 기적으로 유명한 섬, 바닷길이 열리는 신비의 섬',
       en: 'Famous for Moses Miracle — a sea path appears between islands at low tide',
@@ -145,6 +145,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 5,
+    emoji: '🦆',
     name: {
       ko: '장도 습지',
       en: 'Jangdo Wetland',
@@ -161,7 +162,6 @@ export const attractions: Attraction[] = [
     phone: '061-659-4770',
     rating: 4.0,
     fee: { ko: '무료', en: 'Free', ja: '無料', zh: '免费' },
-    image: '🦆',
     description: {
       ko: '국가습지보호지역, 다양한 습지 생물과 철새 관찰지',
       en: 'National wetland reserve, great for observing wetland wildlife and migratory birds',
@@ -177,6 +177,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 6,
+    emoji: '⛵',
     name: {
       ko: '거문도·백도',
       en: 'Geomundo & Baekdo',
@@ -193,7 +194,6 @@ export const attractions: Attraction[] = [
     phone: '061-659-1187',
     rating: 4.8,
     fee: { ko: '무료 (선비 별도)', en: 'Free (ferry extra)', ja: '無料（船賃別途）', zh: '免费（船费另付）' },
-    image: '🏝️',
     description: {
       ko: '남해 최남단 비경, 백도는 천연기념물로 지정된 무인도 군도',
       en: 'Southernmost scenic beauty, Baekdo is a natural monument uninhabited archipelago',
@@ -209,6 +209,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 7,
+    emoji: '🌉',
     name: {
       ko: '돌산공원',
       en: 'Dolsan Park',
@@ -225,7 +226,6 @@ export const attractions: Attraction[] = [
     phone: '061-659-1819',
     rating: 4.2,
     fee: { ko: '무료', en: 'Free', ja: '無料', zh: '免费' },
-    image: '🌉',
     description: {
       ko: '돌산대교 야경을 한눈에 볼 수 있는 전망 공원',
       en: 'A scenic park with panoramic views of Dolsan Bridge at night',
@@ -241,6 +241,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 8,
+    emoji: '🏖️',
     name: {
       ko: '만성리 검은모래해변',
       en: 'Manseongri Black Sand Beach',
@@ -257,7 +258,6 @@ export const attractions: Attraction[] = [
     phone: '061-659-1819',
     rating: 4.1,
     fee: { ko: '무료', en: 'Free', ja: '無料', zh: '免费' },
-    image: '🏖️',
     description: {
       ko: '국내 희귀한 검은 모래 해변, 해수욕과 기차마을이 유명',
       en: 'Rare black sand beach in Korea, famous for swimming and train village',
@@ -277,6 +277,7 @@ export const attractions: Attraction[] = [
   // ============================================================
   {
     id: 9,
+    emoji: '🏛️',
     name: {
       ko: '진남관',
       en: 'Jinnamgwan',
@@ -293,7 +294,6 @@ export const attractions: Attraction[] = [
     phone: '061-659-3540',
     rating: 4.3,
     fee: { ko: '무료', en: 'Free', ja: '無料', zh: '免费' },
-    image: '🏛️',
     description: {
       ko: '국보 제304호, 현존 최대 단층 목조건물로 이순신 장군의 전라좌수영 본영',
       en: 'National Treasure No.304, the largest single-story wooden building — Admiral Yi\'s naval headquarters',
@@ -309,6 +309,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 10,
+    emoji: '⚔️',
     name: {
       ko: '이순신광장',
       en: 'Yi Sun-sin Square',
@@ -325,7 +326,6 @@ export const attractions: Attraction[] = [
     phone: '061-659-1819',
     rating: 4.2,
     fee: { ko: '무료', en: 'Free', ja: '無料', zh: '免费' },
-    image: '⚔️',
     description: {
       ko: '거북선 모형과 이순신 장군 동상이 있는 여수의 중심 광장',
       en: 'Central square with turtle ship replica and Admiral Yi statue',
@@ -341,6 +341,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 11,
+    emoji: '🎨',
     name: {
       ko: '고소동 벽화마을',
       en: 'Gosodong Mural Village',
@@ -357,7 +358,6 @@ export const attractions: Attraction[] = [
     phone: '061-659-1819',
     rating: 4.0,
     fee: { ko: '무료', en: 'Free', ja: '無料', zh: '免费' },
-    image: '🎨',
     description: {
       ko: '알록달록한 벽화와 골목길이 매력적인 여수 대표 포토스팟',
       en: 'Colorful murals and charming alleys — Yeosu\'s top photo spot',
@@ -373,6 +373,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 12,
+    emoji: '🚲',
     name: {
       ko: '여수해양레일바이크',
       en: 'Yeosu Ocean Railbike',
@@ -389,7 +390,6 @@ export const attractions: Attraction[] = [
     phone: '061-652-7882',
     rating: 4.4,
     fee: { ko: '2인 25,000원', en: '₩25,000/2ppl', ja: '2人 25,000ウォン', zh: '2人 25,000韩元' },
-    image: '🚲',
     description: {
       ko: '바다 위를 달리는 레일바이크, 여수 여행 필수 체험',
       en: 'Rail bike running over the ocean — a must-do Yeosu experience',
@@ -405,6 +405,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 13,
+    emoji: '🎡',
     name: {
       ko: '여수세계박람회장',
       en: 'Expo 2012 Venue',
@@ -421,7 +422,6 @@ export const attractions: Attraction[] = [
     phone: '061-690-2000',
     rating: 4.1,
     fee: { ko: '시설별 상이', en: 'Varies by facility', ja: '施設により異なる', zh: '各设施不同' },
-    image: '🎡',
     description: {
       ko: '2012 여수세계박람회 개최지, 아쿠아리움·스카이타워·빅오쇼 등 즐길 거리 가득',
       en: '2012 Expo venue with aquarium, sky tower, Big-O show and more',
@@ -437,6 +437,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 14,
+    emoji: '🛕',
     name: {
       ko: '충민사',
       en: 'Chungminsa Shrine',
@@ -453,7 +454,6 @@ export const attractions: Attraction[] = [
     phone: '061-659-3540',
     rating: 3.9,
     fee: { ko: '무료', en: 'Free', ja: '無料', zh: '免费' },
-    image: '🛕',
     description: {
       ko: '이순신 장군을 모시는 사당, 임진왜란 역사 학습 장소',
       en: 'Shrine dedicated to Admiral Yi Sun-sin, a place to learn about the Imjin War',
@@ -469,6 +469,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 15,
+    emoji: '🌃',
     name: {
       ko: '여수 밤바다 낭만포차거리',
       en: 'Yeosu Night Sea Romantic Pocha Street',
@@ -485,7 +486,6 @@ export const attractions: Attraction[] = [
     phone: '061-659-1819',
     rating: 4.5,
     fee: { ko: '무료 (음식 별도)', en: 'Free (food extra)', ja: '無料（食事別途）', zh: '免费（餐饮另付）' },
-    image: '🌃',
     description: {
       ko: '여수 밤바다를 배경으로 해산물과 야경을 즐기는 대표 야시장 거리',
       en: 'Iconic night market street with seafood and ocean night views',
@@ -505,6 +505,7 @@ export const attractions: Attraction[] = [
   // ============================================================
   {
     id: 16,
+    emoji: '🚡',
     name: {
       ko: '여수 케이블카',
       en: 'Yeosu Cable Car',
@@ -521,7 +522,6 @@ export const attractions: Attraction[] = [
     phone: '061-664-7301',
     rating: 4.6,
     fee: { ko: '성인 15,000원~', en: 'From ₩15,000', ja: '大人 15,000ウォン~', zh: '成人 15,000韩元起' },
-    image: '🚡',
     description: {
       ko: '바다 위를 가로지르는 해상 케이블카, 크리스탈·일반 캐빈 선택 가능',
       en: 'Ocean-crossing cable car with crystal and regular cabin options',
@@ -537,6 +537,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 17,
+    emoji: '🐳',
     name: {
       ko: '아쿠아플라넷 여수',
       en: 'Aqua Planet Yeosu',
@@ -553,7 +554,6 @@ export const attractions: Attraction[] = [
     phone: '061-660-1111',
     rating: 4.3,
     fee: { ko: '성인 29,500원', en: '₩29,500 Adult', ja: '大人 29,500ウォン', zh: '成人 29,500韩元' },
-    image: '🐳',
     description: {
       ko: '국내 2위 규모 아쿠아리움, 벨루가·펭귄·해양생물 전시',
       en: 'Korea\'s 2nd largest aquarium with beluga whales, penguins & marine life',
@@ -569,6 +569,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 18,
+    emoji: '🔬',
     name: {
       ko: '여수 해양수산과학관',
       en: 'Yeosu Maritime Science Museum',
@@ -585,7 +586,6 @@ export const attractions: Attraction[] = [
     phone: '061-690-6001',
     rating: 3.8,
     fee: { ko: '무료', en: 'Free', ja: '無料', zh: '免费' },
-    image: '🔬',
     description: {
       ko: '해양 생태계를 체험하고 배울 수 있는 과학관',
       en: 'Science museum where you can experience and learn about marine ecosystems',
@@ -601,6 +601,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 19,
+    emoji: '🚤',
     name: {
       ko: '해상택시 (장군도 투어)',
       en: 'Sea Taxi (Janggun Island Tour)',
@@ -617,7 +618,6 @@ export const attractions: Attraction[] = [
     phone: '061-659-1819',
     rating: 4.0,
     fee: { ko: '10,000원~', en: 'From ₩10,000', ja: '10,000ウォン~', zh: '10,000韩元起' },
-    image: '🚤',
     description: {
       ko: '바다에서 여수 야경과 장군도를 감상하는 해상 투어',
       en: 'Ocean tour to enjoy Yeosu night view and Janggun Island from the sea',
@@ -633,6 +633,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 20,
+    emoji: '🎨',
     name: {
       ko: '예술랜드 리조트',
       en: 'Yesul Land Resort',
@@ -649,7 +650,6 @@ export const attractions: Attraction[] = [
     phone: '061-644-9400',
     rating: 4.1,
     fee: { ko: '시설별 상이', en: 'Varies by facility', ja: '施設により異なる', zh: '各设施不同' },
-    image: '🎨',
     description: {
       ko: '예술작품과 바다가 어우러진 복합 문화 리조트',
       en: 'Art & ocean combined cultural resort complex',
@@ -669,6 +669,7 @@ export const attractions: Attraction[] = [
   // ============================================================
   {
     id: 21,
+    emoji: '🌉',
     name: {
       ko: '돌산대교',
       en: 'Dolsan Bridge',
@@ -685,12 +686,11 @@ export const attractions: Attraction[] = [
     phone: '061-659-1819',
     rating: 4.4,
     fee: { ko: '무료', en: 'Free', ja: '無料', zh: '免费' },
-    image: '🌉',
     description: {
       ko: '여수를 상징하는 야경 명소, 무지개빛 조명이 아름다운 대표 랜드마크',
       en: 'Yeosu\'s iconic night view landmark, beautiful with rainbow-colored lights',
       ja: '麗水を象徴する夜景名所、虹色のライトアップが美しい代表的ランドマーク',
-      zh: '象征丽水的夜景名胜，彩虹灯光美丽的代表性地标',
+      zh: '象征丽수的夜景名胜，彩虹灯光美丽的代表性地标',
     },
     highlights: {
       ko: ['무지개 조명', '야경 포인트', '돌산공원 전망', '드라이브 코스'],
@@ -701,6 +701,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 22,
+    emoji: '🗼',
     name: {
       ko: '하멜등대',
       en: 'Hamel Lighthouse',
@@ -717,7 +718,6 @@ export const attractions: Attraction[] = [
     phone: '061-659-1819',
     rating: 4.0,
     fee: { ko: '무료', en: 'Free', ja: '無料', zh: '免费' },
-    image: '🗼',
     description: {
       ko: '네덜란드인 하멜의 표류기를 기념한 등대, 낭만포차 거리의 상징',
       en: 'Lighthouse commemorating Dutch sailor Hamel\'s shipwreck journal, icon of romantic pocha street',
@@ -733,6 +733,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 23,
+    emoji: '🎆',
     name: {
       ko: '여수 빅오 (Big-O)',
       en: 'Yeosu Big-O',
@@ -749,7 +750,6 @@ export const attractions: Attraction[] = [
     phone: '061-690-2000',
     rating: 4.5,
     fee: { ko: '무료 (공연 시간 확인)', en: 'Free (check show times)', ja: '無料（公演時間確認）', zh: '免费（请确认演出时间）' },
-    image: '🎆',
     description: {
       ko: '세계 최초 해수 멀티미디어쇼, 물·불·레이저·홀로그램의 환상적 공연',
       en: 'World\'s first seawater multimedia show with water, fire, laser & hologram',
@@ -765,6 +765,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 24,
+    emoji: '🏗️',
     name: {
       ko: '여수 스카이타워',
       en: 'Yeosu Sky Tower',
@@ -781,7 +782,6 @@ export const attractions: Attraction[] = [
     phone: '061-690-2000',
     rating: 4.2,
     fee: { ko: '성인 5,000원', en: '₩5,000 Adult', ja: '大人 5,000ウォン', zh: '成人 5,000韩元' },
-    image: '🏗️',
     description: {
       ko: '67m 높이 전망타워, 여수 항구와 바다를 360도 파노라마로 조망',
       en: '67m observation tower with 360° panoramic views of Yeosu harbor and sea',
@@ -797,6 +797,7 @@ export const attractions: Attraction[] = [
   },
   {
     id: 25,
+    emoji: '⛵',
     name: {
       ko: '여수 종포해양공원',
       en: 'Jongpo Marine Park',
@@ -813,7 +814,6 @@ export const attractions: Attraction[] = [
     phone: '061-659-1819',
     rating: 4.0,
     fee: { ko: '무료', en: 'Free', ja: '無料', zh: '免费' },
-    image: '⛵',
     description: {
       ko: '바다 바로 옆 공원, 여수 엑스포역과 가까운 산책·조깅 명소',
       en: 'Seaside park near Yeosu Expo Station, great for walking and jogging',

@@ -126,7 +126,7 @@ export default function Attractions() {
                 {/* 카드 헤더 */}
                 <div className={`attr-card-header ${a.category}`}>
                   <span className="category-badge">{catBadge[a.category]?.[lang] || a.category}</span>
-                  <span style={{ fontSize: '2.5rem', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))' }}>{a.image}</span>
+                  <span style={{ fontSize: '2.5rem', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))' }}>{a.emoji}</span>
                   <span className="fee-badge">{a.fee[lang]}</span>
                 </div>
 

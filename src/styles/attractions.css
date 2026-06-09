@@ -1,49 +1,591 @@
-:root {
-  --primary: #2563eb;
-  --secondary: #0f172a;
-  --accent: #14b8a6;
-  --bg: #f8fafc;
-  --text: #1e293b;
-}
+/* ═══════════════════════════════════════════════════════════
+   ATTRACTIONS.CSS - Aioni 여수 관광지 페이지 스타일
+   ═══════════════════════════════════════════════════════════ */
 
-body {
-  margin: 0;
-  font-family: 'D2Coding', 'Noto Sans KR', Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
+/* ──────────────────────────────────────────────────────── */
+/* 📱 기본 구조 */
+/* ──────────────────────────────────────────────────────── */
 
-.container {
-  max-width: 960px;
+.page {
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 16px;
+  background: inherit;
 }
 
-.card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+/* ──────────────────────────────────────────────────────── */
+/* 🔍 검색바 */
+/* ──────────────────────────────────────────────────────── */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.08);
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
-  padding: 20px;
-  margin-bottom: 16px;
+  transition: all 0.3s ease;
 }
 
-.button {
-  display: inline-block;
-  background: var(--primary);
-  color: white;
-  text-decoration: none;
-  padding: 10px 16px;
+[data-theme="light"] .search-bar {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="night"] .search-bar,
+[data-theme="practical"] .search-bar {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.search-icon {
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  outline: none;
+  color: inherit;
+}
+
+.search-bar input::placeholder {
+  opacity: 0.5;
+}
+
+/* ──────────────────────────────────────────────────────── */
+/* 📑 카테고리 탭 */
+/* ──────────────────────────────────────────────────────── */
+
+.category-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+
+.category-tabs::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.cat-tab {
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: inherit;
+}
+
+.cat-tab:hover {
+  border-color: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.cat-tab.active {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(0, 180, 255, 0.3);
+}
+
+[data-theme="light"] .cat-tab {
+  border-color: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="night"] .cat-tab,
+[data-theme="practical"] .cat-tab {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ──────────────────────────────────────────────────────── */
+/* 📊 결과 개수 */
+/* ──────────────────────────────────────────────────────── */
+
+.result-count {
+  margin-bottom: 16px;
+  font-size: 13px;
+  opacity: 0.65;
+  text-align: center;
+}
+
+.result-count strong {
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ──────────────────────────────────────────────────────── */
+/* 🎴 카드 메인 컨테이너 */
+/* ──────────────────────────────────────────────────────── */
+
+.attr-card {
+  margin-bottom: 16px;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.attr-card:active {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+[data-theme="light"] .attr-card {
+  background: rgba(0, 0, 0, 0.02);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="night"] .attr-card,
+[data-theme="practical"] .attr-card {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ──────────────────────────────────────────────────────── */
+/* 🎨 카드 헤더 (이모지 + 뱃지) */
+/* ──────────────────────────────────────────────────────── */
+
+.attr-card-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  min-height: 120px;
+  gap: 12px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.02) 100%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.attr-card-header.nature {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(76, 175, 80, 0.05) 100%);
+}
+
+.attr-card-header.culture {
+  background: linear-gradient(135deg, rgba(255, 152, 0, 0.1) 0%, rgba(255, 152, 0, 0.05) 100%);
+}
+
+.attr-card-header.experience {
+  background: linear-gradient(135deg, rgba(156, 39, 176, 0.1) 0%, rgba(156, 39, 176, 0.05) 100%);
+}
+
+.attr-card-header.landmark {
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(33, 150, 243, 0.05) 100%);
+}
+
+[data-theme="night"] .attr-card-header,
+[data-theme="practical"] .attr-card-header {
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 카테고리 뱃지 (좌상단) */
+.category-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(0, 180, 255, 0.2);
+  color: #00d4ff;
+  border-radius: 8px;
+  letter-spacing: 0.3px;
+}
+
+[data-theme="light"] .category-badge {
+  background: rgba(0, 120, 200, 0.15);
+  color: #0078c8;
+}
+
+[data-theme="night"] .category-badge,
+[data-theme="practical"] .category-badge {
+  background: rgba(0, 200, 255, 0.15);
+  color: #7dd8ff;
+}
+
+/* 요금 뱃지 (우상단) */
+.fee-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(76, 175, 80, 0.15);
+  color: #4caf50;
   border-radius: 8px;
 }
 
-.button:hover {
-  background: #1d4ed8;
+[data-theme="light"] .fee-badge {
+  background: rgba(56, 142, 60, 0.12);
+  color: #388e3c;
 }
 
-.notice {
-  border-left: 4px solid var(--accent);
-  padding: 12px 16px;
-  background: #ecfeff;
+[data-theme="night"] .fee-badge,
+[data-theme="practical"] .fee-badge {
+  background: rgba(129, 199, 132, 0.15);
+  color: #81c784;
+}
+
+/* ──────────────────────────────────────────────────────── */
+/* 📝 카드 본문 */
+/* ──────────────────────────────────────────────────────── */
+
+.attr-card-body {
+  padding: 16px;
+}
+
+.attr-card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 12px;
+}
+
+.attr-card-title h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.attr-rating {
+  display: inline-block;
+  padding: 4px 8px;
+  background: rgba(255, 193, 7, 0.15);
+  color: #ffc107;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+[data-theme="light"] .attr-rating {
+  background: rgba(255, 193, 7, 0.12);
+}
+
+[data-theme="night"] .attr-rating,
+[data-theme="practical"] .attr-rating {
+  background: rgba(255, 193, 7, 0.15);
+}
+
+/* 설명 텍스트 */
+.attr-desc {
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.75;
+}
+
+/* ──────────────────────────────────────────────────────── */
+/* 🏷️ 하이라이트 태그들 */
+/* ──────────────────────────────────────────────────────── */
+
+.attr-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.highlight-tag {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  background: rgba(0, 200, 255, 0.12);
+  color: #7dd8ff;
+  border: 1px solid rgba(0, 200, 255, 0.2);
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.highlight-tag:active {
+  background: rgba(0, 200, 255, 0.2);
+}
+
+[data-theme="light"] .highlight-tag {
+  background: rgba(0, 120, 200, 0.08);
+  color: #0078c8;
+  border: 1px solid rgba(0, 120, 200, 0.15);
+}
+
+[data-theme="night"] .highlight-tag,
+[data-theme="practical"] .highlight-tag {
+  background: rgba(0, 200, 255, 0.12);
+  color: #7dd8ff;
+  border: 1px solid rgba(0, 200, 255, 0.2);
+}
+
+/* ──────────────────────────────────────────────────────── */
+/* 📍 주소 */
+/* ──────────────────────────────────────────────────────── */
+
+.attr-address {
+  padding: 10px 0;
+  margin: 12px 0;
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: 0.65;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .attr-address {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="night"] .attr-address,
+[data-theme="practical"] .attr-address {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ──────────────────────────────────────────────────────── */
+/* 🔘 액션 버튼 */
+/* ──────────────────────────────────────────────────────── */
+
+.attr-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.attr-btn {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.attr-btn.call {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.25);
+}
+
+.attr-btn.call:active {
+  box-shadow: 0 2px 6px rgba(255, 107, 107, 0.2);
+  transform: translateY(1px);
+}
+
+.attr-btn.map {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  box-shadow: 0 4px 12px rgba(0, 180, 255, 0.25);
+}
+
+.attr-btn.map:active {
+  box-shadow: 0 2px 6px rgba(0, 180, 255, 0.2);
+  transform: translateY(1px);
+}
+
+/* ──────────────────────────────────────────────────────── */
+/* 😢 빈 상태 */
+/* ──────────────────────────────────────────────────────── */
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 3.5rem;
+  margin-bottom: 16px;
+}
+
+.empty-state p {
+  font-size: 15px;
+  opacity: 0.6;
+  line-height: 1.6;
+}
+
+/* ──────────────────────────────────────────────────────── */
+/* ⬆️ 상단 스크롤 버튼 */
+/* ──────────────────────────────────────────────────────── */
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 16px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 180, 255, 0.4);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.scroll-top-btn:active {
+  box-shadow: 0 2px 6px rgba(0, 180, 255, 0.3);
+  transform: scale(0.95);
+}
+
+/* ──────────────────────────────────────────────────────── */
+/* 🔧 테마별 제목 색상 */
+/* ──────────────────────────────────────────────────────── */
+
+[data-theme=""] .attr-card-title h3,
+[data-theme=""] .attr-card-body h3,
+[data-theme="night"] .attr-card-title h3,
+[data-theme="night"] .attr-card-body h3 {
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .attr-card-title h3,
+[data-theme="light"] .attr-card-body h3 {
+  color: #1a1a1a !important;
+}
+
+[data-theme="practical"] .attr-card-title h3,
+[data-theme="practical"] .attr-card-body h3 {
+  color: #ffffff !important;
+}
+
+/* ──────────────────────────────────────────────────────── */
+/* 🔧 테마별 설명 색상 */
+/* ──────────────────────────────────────────────────────── */
+
+[data-theme=""] .attr-desc,
+[data-theme=""] .attr-card-body .attr-desc,
+[data-theme="night"] .attr-desc,
+[data-theme="night"] .attr-card-body .attr-desc {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+[data-theme="light"] .attr-desc,
+[data-theme="light"] .attr-card-body .attr-desc {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+[data-theme="practical"] .attr-desc,
+[data-theme="practical"] .attr-card-body .attr-desc {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* ──────────────────────────────────────────────────────── */
+/* 🔧 테마별 태그 색상 */
+/* ──────────────────────────────────────────────────────── */
+
+[data-theme=""] .highlight-tag,
+[data-theme=""] .attr-card-body .highlight-tag,
+[data-theme="night"] .highlight-tag,
+[data-theme="night"] .attr-card-body .highlight-tag {
+  background: rgba(0, 200, 255, 0.12) !important;
+  color: #7dd8ff !important;
+  border: 1px solid rgba(0, 200, 255, 0.2) !important;
+}
+
+[data-theme="light"] .highlight-tag,
+[data-theme="light"] .attr-card-body .highlight-tag {
+  background: rgba(0, 120, 200, 0.08) !important;
+  color: #0078c8 !important;
+  border: 1px solid rgba(0, 120, 200, 0.15) !important;
+}
+
+[data-theme="practical"] .highlight-tag,
+[data-theme="practical"] .attr-card-body .highlight-tag {
+  background: rgba(0, 200, 255, 0.12) !important;
+  color: #7dd8ff !important;
+  border: 1px solid rgba(0, 200, 255, 0.2) !important;
+}
+
+/* ──────────────────────────────────────────────────────── */
+/* 🔧 테마별 주소 색상 */
+/* ──────────────────────────────────────────────────────── */
+
+[data-theme=""] .attr-address,
+[data-theme=""] .attr-card-body .attr-address,
+[data-theme="night"] .attr-address,
+[data-theme="night"] .attr-card-body .attr-address {
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+
+[data-theme="light"] .attr-address,
+[data-theme="light"] .attr-card-body .attr-address {
+  color: rgba(0, 0, 0, 0.55) !important;
+}
+
+[data-theme="practical"] .attr-address,
+[data-theme="practical"] .attr-card-body .attr-address {
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* ──────────────────────────────────────────────────────── */
+/* 📱 모바일 최적화 */
+/* ──────────────────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .page {
+    padding: 12px;
+  }
+
+  .attr-card-header {
+    min-height: 100px;
+    padding: 20px 12px;
+  }
+
+  .attr-card-title h3 {
+    font-size: 16px;
+  }
+
+  .attr-desc {
+    font-size: 13px;
+  }
+
+  .attr-actions {
+    gap: 8px;
+  }
+
+  .attr-btn {
+    padding: 9px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .attr-card-header {
+    min-height: 90px;
+  }
+
+  .category-badge,
+  .fee-badge {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
 }
