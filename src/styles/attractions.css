@@ -1,77 +1,49 @@
-/* 🔧 테마별 제목 색상 */
-[data-theme=""] .attr-card-title h3,
-[data-theme=""] .attr-card-body h3,
-[data-theme="night"] .attr-card-title h3,
-[data-theme="night"] .attr-card-body h3 {
-  color: #ffffff !important;
+:root {
+  --primary: #2563eb;
+  --secondary: #0f172a;
+  --accent: #14b8a6;
+  --bg: #f8fafc;
+  --text: #1e293b;
 }
 
-[data-theme="light"] .attr-card-title h3,
-[data-theme="light"] .attr-card-body h3 {
-  color: #1a1a1a !important;
+body {
+  margin: 0;
+  font-family: 'D2Coding', 'Noto Sans KR', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
 }
 
-[data-theme="practical"] .attr-card-title h3,
-[data-theme="practical"] .attr-card-body h3 {
-  color: #ffffff !important;
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
 }
 
-/* 🔧 테마별 설명 색상 */
-[data-theme=""] .attr-desc,
-[data-theme=""] .attr-card-body .attr-desc,
-[data-theme="night"] .attr-desc,
-[data-theme="night"] .attr-card-body .attr-desc {
-  color: rgba(255, 255, 255, 0.7) !important;
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+  padding: 20px;
+  margin-bottom: 16px;
 }
 
-[data-theme="light"] .attr-desc,
-[data-theme="light"] .attr-card-body .attr-desc {
-  color: rgba(0, 0, 0, 0.6) !important;
+.button {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
 }
 
-[data-theme="practical"] .attr-desc,
-[data-theme="practical"] .attr-card-body .attr-desc {
-  color: rgba(255, 255, 255, 0.7) !important;
+.button:hover {
+  background: #1d4ed8;
 }
 
-/* 🔧 테마별 태그 색상 */
-[data-theme=""] .highlight-tag,
-[data-theme=""] .attr-card-body .highlight-tag,
-[data-theme="night"] .highlight-tag,
-[data-theme="night"] .attr-card-body .highlight-tag {
-  background: rgba(0, 200, 255, 0.12) !important;
-  color: #7dd8ff !important;
-  border: 1px solid rgba(0, 200, 255, 0.2) !important;
-}
-
-[data-theme="light"] .highlight-tag,
-[data-theme="light"] .attr-card-body .highlight-tag {
-  background: rgba(0, 120, 200, 0.08) !important;
-  color: #0078c8 !important;
-  border: 1px solid rgba(0, 120, 200, 0.15) !important;
-}
-
-[data-theme="practical"] .highlight-tag,
-[data-theme="practical"] .attr-card-body .highlight-tag {
-  background: rgba(0, 200, 255, 0.12) !important;
-  color: #7dd8ff !important;
-  border: 1px solid rgba(0, 200, 255, 0.2) !important;
-}
-
-/* 🔧 테마별 주소 색상 */
-[data-theme=""] .attr-address,
-[data-theme=""] .attr-card-body .attr-address,
-[data-theme="night"] .attr-address,
-[data-theme="night"] .attr-card-body .attr-address {
-  color: rgba(255, 255, 255, 0.55) !important;
-}
-
-[data-theme="light"] .attr-address,
-[data-theme="light"] .attr-card-body .attr-address {
-  color: rgba(0, 0, 0, 0.55) !important;
-}
-
-[data-theme="practical"] .attr-address,
-[data-theme="practical"] .attr-card-body .attr-address {
-  color: rgba(255, 255, 255, 0.55) !important;
+.notice {
+  border-left: 4px solid var(--accent);
+  padding: 12px 16px;
+  background: #ecfeff;
 }
