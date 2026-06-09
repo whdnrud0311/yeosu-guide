@@ -543,3 +543,27 @@ padding: 4px 8px;
 [data-theme="light"] *::after {
   color: #000000;
 }
+/* attractions.css - Light Theme 검은색 고정 */
+[data-theme="light"] h3 {
+  color: #000000 !important;
+}
+
+[data-theme="light"] .attr-desc {
+  color: #000000 !important;
+}
+
+[data-theme="light"] .attr-address {
+  color: #000000 !important;
+}
+
+[data-theme="light"] .meta {
+  color: #000000 !important;
+}
+
+[data-theme="light"] .itinerary-card h3 {
+  color: #000000 !important;
+}
+
+[data-theme="light"] .itinerary-card .meta {
+  color: #000000 !important;
+}
